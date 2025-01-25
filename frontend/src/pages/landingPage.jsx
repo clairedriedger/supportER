@@ -21,15 +21,74 @@ const LandingPage = () => {
             </header>
 
             {/* Central Image */}
-            <main class="flex-grow flex items-center justify-center">
+            <main class="relative flex-grow flex items-center justify-center">
                 <img src={davinci} alt="Da Vinci" class="w-3/4 h-3/4 object-cover rounded-2xl shadow-md" />
-                <a href="rightleg" class="absolute top-[2201px] left-[1031px] w-[685px] h-[748px] border-transparent" title="Right Leg"></a>
-                <a href="leftleg" class="absolute top-[2201px] left-[391px] w-[639px] h-[746px] border-transparent" title="Left Leg"></a>
-                <a href="body" class="absolute top-[1453px] left-[822px] w-[389px] h-[537px] border-transparent" title="Body"></a>
-                <a href="leftarm" class="absolute top-[918px] left-[822px] w-[574px] h=[257px] border-transparent" title="Left Arm"></a>
-                <a href="rightarm" class="absolute top-[1171px] left-[1211px] w-[602px] h=[256px] border-transparent" title="Right Arm"></a>
-                <a href="head" class="absolute top-[916px] left-[675px] w-[818px] h=[501px] border-transparent" title="Head"></a>
-
+                <Link
+                    to="/rightleg"
+                    className="absolute border border-black"
+                    style={{
+                        top: '50%',
+                        left: '50%',
+                        width: '20%',
+                        height: '25%',
+                    }}
+                    title="Right Leg"
+                ></Link>
+                <Link
+                    to="/leftleg"
+                    className="absolute border border-black"
+                    style={{
+                        top: '50%',
+                        left: '30%',
+                        width: '20%',
+                        height: '25%',
+                    }}
+                    title="Left Leg"
+                ></Link>
+                <Link
+                    to="/torso"
+                    className="absolute border border-black"
+                    style={{
+                        top: '33%',
+                        left: '44%',
+                        width: '12%',
+                        height: '17.1%',
+                    }}
+                    title="Torso"
+                ></Link>
+                <Link
+                    to="/leftarm"
+                    className="absolute border border-black"
+                    style={{
+                        top: '32%',
+                        left: '21%',
+                        width: '23%',
+                        height: '10%',
+                    }}
+                    title="Torso"
+                ></Link>
+                <Link
+                    to="/rightarm"
+                    className="absolute border border-black"
+                    style={{
+                        top: '32%',
+                        left: '56%',
+                        width: '24%',
+                        height: '10%',
+                    }}
+                    title="Torso"
+                ></Link>
+                <Link
+                    to="/head"
+                    className="absolute border border-black"
+                    style={{
+                        top: '18%',
+                        left: '44%',
+                        width: '12%',
+                        height: '15%',
+                    }}
+                    title="Torso"
+                ></Link>
             </main>
 
             {/* Footer Navigation */}
