@@ -1,7 +1,7 @@
 import React from 'react';
-const LeftArm = () => {
+const Torso = () => {
     return (
         <div></div> );
     }
 
-export default LeftArm;
+export default Torso;

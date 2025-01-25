@@ -3,12 +3,12 @@ import './App.css'
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import LandingPage from './pages/landingPage';
 import RegisterPage from './pages/registerPage';
-import leftleg from './pages/leftleg'
-import rightleg from './pages/rightleg'
-import body from './pages/body'
-import leftarm from './pages/leftarm'
-import rightarm from './pages/rightarm'
-import head from './pages/arm'
+import LeftLeg from './pages/leftleg';
+import RightLeg from './pages/rightleg';
+import Torso from './pages/torso';
+import LeftArm from './pages/leftarm';
+import RightArm from './pages/rightarm';
+import Head from './pages/head';
 
 function App() {
   //const [count, setCount] = useState(0)
@@ -18,12 +18,12 @@ function App() {
       <Routes>
         <Route path="/" element={<LandingPage />} />
         <Route path="/register" element={<RegisterPage />} />
-        <Route path="/leftleg" element={<leftleg />} />
-        <Route path="/rightleg" element={<rightleg />} />
-        <Route path="/body" element={<body />} />
-        <Route path="/leftarm" element={<leftarm />} />
-        <Route path="/rightarm" element={<rightarm />} />
-        <Route path="/head" element={<head />} />
+        <Route path="/leftleg" element={<LeftLeg />} />
+        <Route path="/rightleg" element={<RightLeg />} />
+        <Route path="/torso" element={<Torso />} />
+        <Route path="/leftarm" element={<LeftArm />} />
+        <Route path="/rightarm" element={<RightArm />} />
+        <Route path="/head" element={<Head />} />
 
 
       </Routes>
