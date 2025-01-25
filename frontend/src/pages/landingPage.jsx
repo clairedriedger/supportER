@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import davinci from '../assets/davinci.png';
-import bandaid from '../assets/bandaid.svg';
+import bandaid from '../assets/bandaid_inverted.svg';
 import question_mark from '../assets/question_mark.png';
 
 
