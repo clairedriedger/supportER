@@ -20,6 +20,13 @@ const LandingPage = () => {
             {/* Central Image */}
             <main class="flex-grow flex items-center justify-center">
                 <img src={davinci} alt="Da Vinci" class="w-3/4 h-3/4 object-cover rounded-2xl shadow-md" />
+                <a href="rightleg" class="absolute top-[2201px] left-[1031px] w-[685px] h-[748px] border-transparent" title="Right Leg"></a>
+                <a href="leftleg" class="absolute top-[2201px] left-[391px] w-[639px] h-[746px] border-transparent" title="Left Leg"></a>
+                <a href="body" class="absolute top-[1453px] left-[822px] w-[389px] h-[537px] border-transparent" title="Body"></a>
+                <a href="leftarm" class="absolute top-[918px] left-[822px] w-[574px] h=[257px] border-transparent" title="Left Arm"></a>
+                <a href="rightarm" class="absolute top-[1171px] left-[1211px] w-[602px] h=[256px] border-transparent" title="Right Arm"></a>
+                <a href="head" class="absolute top-[916px] left-[675px] w-[818px] h=[501px] border-transparent" title="Head"></a>
+
             </main>
 
             {/* Footer Navigation */}
