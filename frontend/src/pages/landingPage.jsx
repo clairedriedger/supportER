@@ -25,7 +25,7 @@ const LandingPage = () => {
                 <img src={davinci} alt="Da Vinci" class="w-3/4 h-3/4 object-cover rounded-2xl shadow-md" />
                 <Link
                     to="/rightleg"
-                    className="absolute border border-black"
+                    className="absolute"
                     style={{
                         top: '50%',
                         left: '50%',
@@ -36,7 +36,7 @@ const LandingPage = () => {
                 ></Link>
                 <Link
                     to="/leftleg"
-                    className="absolute border border-black"
+                    className="absolute"
                     style={{
                         top: '50%',
                         left: '30%',
@@ -47,7 +47,7 @@ const LandingPage = () => {
                 ></Link>
                 <Link
                     to="/torso"
-                    className="absolute border border-black"
+                    className="absolute"
                     style={{
                         top: '33%',
                         left: '44%',
@@ -58,7 +58,7 @@ const LandingPage = () => {
                 ></Link>
                 <Link
                     to="/leftarm"
-                    className="absolute border border-black"
+                    className="absolute"
                     style={{
                         top: '32%',
                         left: '21%',
@@ -69,7 +69,7 @@ const LandingPage = () => {
                 ></Link>
                 <Link
                     to="/rightarm"
-                    className="absolute border border-black"
+                    className="absolute"
                     style={{
                         top: '32%',
                         left: '56%',
@@ -80,7 +80,7 @@ const LandingPage = () => {
                 ></Link>
                 <Link
                     to="/head"
-                    className="absolute border border-black"
+                    className="absolute"
                     style={{
                         top: '18%',
                         left: '44%',
