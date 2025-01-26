@@ -12,6 +12,7 @@ import Head from './pages/head';
 import LoginPage from './pages/loginPage';
 import BodyPartPage from './pages/bodyPartPage';
 import ThreadCreationPage from './pages/threadPage';
+import InstructionsPage from './pages/instructionsPage';
 
 
 
@@ -31,6 +32,7 @@ function App() {
         <Route path="/rightarm" element={<RightArm />} />
         <Route path="/head" element={<Head />} />
         <Route path="/thread" element={<ThreadCreationPage />} />
+        <Route path="/instructions" element={<InstructionsPage />} />
 
       </Routes>
     </Router>
