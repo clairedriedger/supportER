@@ -20,6 +20,14 @@ const ThreadCreationPage = ({patientname, Pid}) => {
             };
             const response = await axios.post("http://localhost:3001/api/threads/firstThread", threadData);
             console.log("Thread created:", response.data);
+            /*console.log("Thread created:", response.data.thread._id);
+
+            const newThreadData = {
+                thread: response.data.thread._id
+            };
+            const responsePatient = await axios.put(`http://localhost:3001/api/users/linkThread/${Pid}`, newThreadData);
+            console.log("Thread created:", responsePatient.data);*/
+
         } catch (error) {
             console.error("Error creating thread:", error.message);
             alert("Thread creation failed. Please try again.");
@@ -29,7 +37,7 @@ const ThreadCreationPage = ({patientname, Pid}) => {
 
 
     return(
-        <div className="z=10">
+        <div className="z-10">
             <div className="space-y-[100px]">
                 <h1 className="text-5xl font-bold">
                     <span className="text-black">arch</span><span className="text-pink-600">ER</span>
