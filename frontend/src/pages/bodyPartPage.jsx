@@ -45,6 +45,14 @@ const BodyPartPage = ({ bodyPart, patientUserName, startStatus, pID }) => {
         ]);
     };
 
+    const handleArrowClick = (e) => {
+        if (startStatus) {
+          navigate('/'); // Navigate to home if status is true
+        } else {
+          alert('Status is false, navigation prevented');
+        };
+    };
+
     if (!image) {
         return (
             <div className="flex items-center justify-center h-screen">
@@ -101,7 +109,7 @@ const BodyPartPage = ({ bodyPart, patientUserName, startStatus, pID }) => {
                             border: 'none',
                             outline: 'none',
                         }}
-                        onClick={() => navigate(`/dart/${dart.id}`)} // Redirect on click
+                        onClick={() => setShowThread(true)} // Redirect on click
                     >
                         <img
                             src={dartImage}
@@ -109,27 +117,18 @@ const BodyPartPage = ({ bodyPart, patientUserName, startStatus, pID }) => {
                             className="w-15 h-15 object-contain"
                         />
                     </button>
+                    
+
                 ))}
+                {showThread && (
+                    <ThreadCreationPage
+                        patientname={patientUserName}
+                        Pid={pID}
+                    />
+                )}
             </main>
 
-            {/* Thread button */}
-            {startStatus && (
-                <div>
-                    <button
-                        onClick={() => setShowThread(true)}
-                        className="bg-blue-500 text-black px-4 py-2 rounded-md"
-                    >
-                        Show Thread Page
-                    </button>
-
-                    {showThread && (
-                        <ThreadCreationPage
-                            patientname={patientUserName}
-                            Pid={pID}
-                        />
-                    )}
-                </div>
-            )}
+        
 
             {/* Footer */}
             <footer className="absolute bottom-0 left-0 w-full bg-gray-100 p-4 rounded-t-2xl shadow-md">
