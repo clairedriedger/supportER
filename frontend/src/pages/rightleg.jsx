@@ -1,7 +1,8 @@
-import React from 'react';
-const RightLeg = () => {
-    return (
-        <div></div> );
-    }
+import React from "react";
+import BodyPartPage from "./bodyPartPage";
 
-export default RightLeg;
+function RightLegPage() {
+    return <BodyPartPage bodyPart="right_leg" />;
+}
+
+export default RightLegPage;
