@@ -9,6 +9,10 @@ import Torso from './pages/torso';
 import LeftArm from './pages/leftarm';
 import RightArm from './pages/rightarm';
 import Head from './pages/head';
+import LoginPage from './pages/loginPage';
+
+
+
 
 function App() {
   //const [count, setCount] = useState(0)
@@ -17,14 +21,15 @@ function App() {
     <Router>
       <Routes>
         <Route path="/" element={<LandingPage />} />
-        <Route path="/register" element={<RegisterPage />} />
+        <Route path="/register" element={<RegisterPage />} /> 
         <Route path="/leftleg" element={<LeftLeg />} />
         <Route path="/rightleg" element={<RightLeg />} />
         <Route path="/torso" element={<Torso />} />
         <Route path="/leftarm" element={<LeftArm />} />
         <Route path="/rightarm" element={<RightArm />} />
         <Route path="/head" element={<Head />} />
-
+        {/*delete this later*/}
+        <Route path="/login" element={<LoginPage />} />
 
       </Routes>
     </Router>
