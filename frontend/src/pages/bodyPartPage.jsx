@@ -90,10 +90,13 @@ const BodyPartPage = ({ bodyPart, patientUserName, startStatus, pID }) => {
                 {darts.map((dart) => (
                     <button
                         key={dart.id}
-                        className="absolute border-none outline-none bg-transparent p-0 m-0"
+                        className="absolute p-0 m-0"
                         style={{
                             left: `${dart.x - 40}px`, // Adjust to center the dart
                             top: `${dart.y - 70}px`,  // Adjust to place the bottom-left corner at the click position (subtract dart height)
+                            background: 'none',
+                            border: 'none',
+                            outline: 'none',
                         }}
                         onClick={() => navigate(`/dart/${dart.id}`)} // Redirect on click
                     >
