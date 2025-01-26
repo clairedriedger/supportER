@@ -13,7 +13,6 @@ function RightLegPage() {
 
     
     return(<div>
-        
         <BodyPartPage bodyPart="right_leg" patientUserName={patientName} startStatus= {startStatus} pID={pid}/>
     </div>); 
     //showThread is boolean, and triggers threadpage when true

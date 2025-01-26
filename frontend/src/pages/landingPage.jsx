@@ -43,6 +43,7 @@ const LandingPage = () => {
                 ></Link>
                 <Link
                     to="/leftleg"
+                    state= {{patient: patientName, pid:pid, startStatus: startStatus}}
                     className="absolute"
                     style={{
                         top: '50%',
@@ -54,6 +55,7 @@ const LandingPage = () => {
                 ></Link>
                 <Link
                     to="/torso"
+                    state= {{patient: patientName, pid:pid, startStatus: startStatus}}
                     className="absolute"
                     style={{
                         top: '33%',
@@ -65,6 +67,7 @@ const LandingPage = () => {
                 ></Link>
                 <Link
                     to="/leftarm"
+                    state= {{patient: patientName, pid:pid, startStatus: startStatus}}
                     className="absolute"
                     style={{
                         top: '32%',
@@ -76,6 +79,7 @@ const LandingPage = () => {
                 ></Link>
                 <Link
                     to="/rightarm"
+                    state= {{patient: patientName, pid:pid, startStatus: startStatus}}
                     className="absolute"
                     style={{
                         top: '32%',
@@ -87,6 +91,7 @@ const LandingPage = () => {
                 ></Link>
                 <Link
                     to="/head"
+                    state= {{patient: patientName, pid:pid, startStatus: startStatus}}
                     className="absolute"
                     style={{
                         top: '18%',
