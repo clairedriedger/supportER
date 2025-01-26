@@ -15,14 +15,25 @@ const LandingPage = () => {
     console.log("isLogin IS: ", startStatus);
     return (
         <div>
-            {/* Logo and Question Icon */}
-            <header class="flex justify-between w-full px-4 py-2">
-                <div></div> {/* Placeholder for alignment */}
-                <h1 class="text-5xl font-bold">
-                    <span class="text-black">arch</span><span class="text-pink-600">ER</span>
+            {/* For the archER title */}
+            <header className="absolute top-20 left-0 justify-between w-full px-1 py-2">
+                <h1 className="text-10xl">
+                    <span className="text-black">arch</span>
+                    <span className="text-pink-600 font-bold">ER</span>
                 </h1>
-                <button>
-                    <img src={question_mark} alt="Question mark" className="w-11 h-11 object-contain" />
+            </header>
+
+            {/* For the question mark button */}
+            <header className="absolute top-4 right-2 justify-between w-full px-1 py-2 bg-white">
+                <button
+                    className="absolute right-0 outline-none border-none shadow-none"
+                    onClick={() => navigate("/instructions")} // Navigate to InstructionsPage
+                >
+                    <img
+                        src={question_mark}
+                        alt="Question mark"
+                        className="w-11 h-11 object-contain"
+                    />
                 </button>
             </header>
 
@@ -104,19 +115,14 @@ const LandingPage = () => {
             </main>
 
             {/* Footer Navigation */}
-            <footer class="w-full bg-gray-100 p-4 rounded-t-2xl shadow-md">
-                <div class="flex justify-between items-center">
+            <footer class="absolute bottom-0 left-0 w-full bg-gray-100 p-4 rounded-t-2xl shadow-md ">
+                <div class="flex flex-row items-center">
 
                     {/* Footer */}
-                    <footer className="w-full bg-gray-100 p-4 rounded-t-2xl shadow-md">
-                        <div className="flex justify-between items-center">
+                    <footer className="w-full bg-gray-100 p-4 rounded-t-2xl shadow-md ">
+                        <div className="flex justify-center items-center">
 
-                            {/* Home Icon */}
-                            <button class="flex flex-col items-center">
-                                <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8 text-black" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 10l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z" />
-                                </svg>
-                            </button>
+                            
 
                             {/* Username text box */}
                             {/* <input
@@ -129,7 +135,7 @@ const LandingPage = () => {
                             <text>username</text>
 
                             {/* Bandaid image */}
-                            <div className="relative">
+                            <div className="absolute right-0 mr-[30px]">
                                 <img
                                     src={bandaid}
                                     alt="bandaid"
