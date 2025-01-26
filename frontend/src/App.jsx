@@ -14,7 +14,6 @@ import BodyPartPage from './pages/bodyPartPage';
 import ThreadCreationPage from './pages/threadPage';
 import InstructionsPage from './pages/instructionsPage';
 
-import CommentPage from './pages/commentPage';
 
 
 function App() {
@@ -32,16 +31,8 @@ function App() {
         <Route path="/leftarm" element={<LeftArm />} />
         <Route path="/rightarm" element={<RightArm />} />
         <Route path="/head" element={<Head />} />
-        
-        {/* Create the thread*/}
         <Route path="/thread" element={<ThreadCreationPage />} />
         <Route path="/instructions" element={<InstructionsPage />} />
-
-        {/* Display the thread */}
-        <Route path="/thread/:threadId" element={<CommentPage />} />
-
-        {/* Add a comment */}
-        <Route path="/thread/:threadId/addComment" element={<handleAddComment />} />
 
       </Routes>
     </Router>

@@ -73,7 +73,7 @@ const ThreadCreationPage = ({patientname, Pid}) => {
                         />
                     </div>
                     <button
-                        className="justify-center bg-black text-black p-1 w-[125px] tb:w-28 shadow rounded-2xl ph:text-[vw] tb:text-[1.15vw] font-poppins font-normal"
+                        className="justify-center bg-black text-white p-1 w-[125px] tb:w-28 shadow rounded-2xl ph:text-[vw] tb:text-[1.15vw] font-poppins font-normal"
                         onClick={createThread}
                     >
                         Create Thread
