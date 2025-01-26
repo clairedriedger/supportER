@@ -13,6 +13,7 @@ import LoginPage from './pages/loginPage';
 import BodyPartPage from './pages/bodyPartPage';
 import ThreadCreationPage from './pages/threadPage';
 import InstructionsPage from './pages/instructionsPage';
+import WelcomePage from './pages/welcomePage';
 
 
 
@@ -22,7 +23,8 @@ function App() {
   return (
     <Router>
       <Routes>
-        <Route path="/" element={<LoginPage />} />
+        <Route path="/" element={<WelcomePage />} />
+        <Route path="/login" element={<LoginPage />} />
         <Route path="/register" element={<RegisterPage />} />
         <Route path="/body" element={<LandingPage />} />
         <Route path="/leftleg" element={<LeftLeg />} />
