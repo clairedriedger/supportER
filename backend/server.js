@@ -6,7 +6,7 @@ import cors from "cors";
 import {connectDB} from './config/db.js';
 import userRoutes from "./routes/userRoutes.js";
 import threadRoutes from "./routes/threadRoutes.js";
-import commentRoutes from "./routes/commentRoutes.js";
+//import commentRoutes from "./routes/commentRoutes.js";
 
 dotenv.config(); // Loads .env content so that connectDB can access MONGO_URI
 const app = express();
@@ -17,7 +17,7 @@ app.use(express.json()); //parse incoming json POST requests
 app.use(express.urlencoded({extended:true})); //recognize the incoming Request Object as strings or arrays
 app.use("/api/users", userRoutes);
 app.use("/api/threads", threadRoutes);
-app.use("/api/comments", commentRoutes);
+//app.use("/api/comments", commentRoutes);
 
 
 app.listen(3001,() => {
