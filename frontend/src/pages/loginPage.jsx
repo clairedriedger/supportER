@@ -1,9 +1,12 @@
 //import React, {useEffect} from 'react';
 import React, { useState } from "react";
+import { useNavigate } from 'react-router-dom'; // For navigation
 import axios from "axios";
 
 const LoginPage = () => {
     const [userName, setUsername] = useState("");
+    const navigate = useNavigate();
+
     const getUserName= async (e) => {
         e.preventDefault(); // prevents reloading the page
         const testingDB = async () => {
@@ -13,6 +16,8 @@ const LoginPage = () => {
                 };
                 const response = await axios.post("http://localhost:3001/api/users/getUsername", patientData);
                 console.log("Raw response from backend:", response.data);
+                console.log("i want the username", patientData);
+                navigate("/body", { state: { patient: patientData.username} });
 
             } catch (error) {
                 console.error("Error registering user:", error.message);
