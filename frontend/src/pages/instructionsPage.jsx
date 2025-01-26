@@ -1,15 +1,21 @@
 import React from "react";
+import { Link, useNavigate } from "react-router-dom";
 import x_button from "../assets/x.png";
 import question_mark from "../assets/question_mark_2.png";
 
 const InstructionsPage = () => {
+    const navigate = useNavigate(); // Initialize the navigate function
+
     return (
         <div className="bg-gray-200 h-screen w-screen flex flex-col">
             {/* Static Top Section */}
             <div className="relative h-[30%] bg-gray-200">
                 {/* For the x button */}
                 <header className="absolute top-4 right-2">
-                    <button className="outline-none border-none shadow-none">
+                    <button
+                        className="outline-none border-none shadow-none"
+                        onClick={() => navigate("/body")} // Navigate back to bodyPartPage
+                    >
                         <img
                             src={x_button}
                             alt="X button"

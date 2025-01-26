@@ -68,7 +68,10 @@ const BodyPartPage = ({ bodyPart, patientUserName, startStatus, pID }) => {
 
             {/* For the question mark button */}
             <header className="absolute top-4 right-2 justify-between w-full px-1 py-2 bg-white">
-                <button className="absolute right-0 outline-none border-none shadow-none">
+                <button
+                    className="absolute right-0 outline-none border-none shadow-none"
+                    onClick={() => navigate("/instructions")} // Navigate to InstructionsPage
+                >
                     <img
                         src={question_mark}
                         alt="Question mark"
