@@ -9,7 +9,10 @@ import question_mark from '../assets/question_mark.png';
 const LandingPage = () => {
     const location = useLocation();
     const patientName = location.state?.patient || {};
+    const pid = location.state?.pid || {};
+    const startStatus = location.state?.isLogin;
     console.log("PATIENT IS: ", patientName);
+    console.log("isLogin IS: ", startStatus);
     return (
         <div>
             {/* Logo and Question Icon */}
@@ -28,6 +31,7 @@ const LandingPage = () => {
                 <img src={davinci} alt="Da Vinci" class="w-3/4 h-3/4 object-cover rounded-2xl shadow-md" />
                 <Link
                     to="/rightleg"
+                    state= {{patient: patientName, pid:pid, startStatus: startStatus}}
                     className="absolute"
                     style={{
                         top: '50%',

@@ -1,8 +1,9 @@
-import React from "react";
+import React, {useState} from "react";
 import { Link } from "react-router-dom";
 // import back_arrow from "../assets/back_button.png";
 import question_mark from "../assets/question_mark_2.png";
 import bandaid from "../assets/bandaid_inverted.svg";
+import ThreadCreationPage from "./threadPage";
 
 // Import body parts images
 import torso from "../assets/torso.png";
@@ -24,8 +25,10 @@ const bodyPartImages = {
 };
 
 // Main body part page component
-const BodyPartPage = ({ bodyPart }) => {
+const BodyPartPage = ({ bodyPart, patientUserName, startStatus, pID}) => {
     const image = bodyPartImages[bodyPart]; // Get the image dynamically
+    const [showThread, setShowThread] = useState(false);
+    console.log("startStatus is : ", startStatus);
 
     // Handle invalid body parts
     if (!image) {
@@ -74,6 +77,17 @@ const BodyPartPage = ({ bodyPart }) => {
                     className="w-full h-full object-cover rounded-2xl shadow-none"
                 />
             </main>
+            {/* thread button */}
+            {startStatus && <div>
+                <button 
+                    onClick={() => setShowThread(true)} 
+                    className="bg-blue-500 text-black px-4 py-2 rounded-md"
+                >
+                    Show Thread Page
+                </button>
+                
+                {showThread && <ThreadCreationPage patientname={patientUserName} Pid={pID}/>}
+            </div>}
 
             {/* Footer */}
             <footer className="absolute bottom-0 left-0 w-full bg-gray-100 p-4 rounded-t-2xl shadow-md">
@@ -81,7 +95,7 @@ const BodyPartPage = ({ bodyPart }) => {
                     {/* Footer buttons */}
 
                     {/* Home button */}
-                    <Link to="/body">
+                    <Link to="/body" state={{patient: patientUserName, startStatus: false}}>
                         <button>
                             <img
                                 src={home_button}

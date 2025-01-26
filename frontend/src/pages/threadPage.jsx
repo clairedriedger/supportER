@@ -1,20 +1,22 @@
 import React, { useState } from "react";
 import axios from "axios";
 
-const ThreadCreationPage = () => {
+
+const ThreadCreationPage = ({patientname, Pid}) => {
     const [threadTitle, setThreadTitle] = useState('');
     const [threadContent, setThreadContent] = useState('');
     const [currentTime, setCurrentTime] = useState(new Date().toLocaleString());
-    const [userName, setUserName] = useState("JaneBroken");
+    //const [userName, setUserName] = useState("JaneBroken");
 
     const createThread = async (e) => {
         e.preventDefault();
         try {
+            console.log("this is the patientname: ", patientname);
             const threadData = {
                 title: threadTitle,
                 content: threadContent,
+                //username: patientname,
                 timestamp: currentTime,
-                username: userName
             };
             const response = await axios.post("http://localhost:3001/api/threads/firstThread", threadData);
             console.log("Thread created:", response.data);
@@ -24,8 +26,10 @@ const ThreadCreationPage = () => {
         }
     };
 
+
+
     return(
-        <div className="">
+        <div className="z=10">
             <div className="space-y-[100px]">
                 <h1 className="text-5xl font-bold">
                     <span className="text-black">arch</span><span className="text-pink-600">ER</span>
@@ -67,7 +71,7 @@ const ThreadCreationPage = () => {
                         Create Thread
                     </button>
                     <div className="absolute bottom-4 left-4 text-[#0D2D7F] font-poppins text-sm">
-                        {userName}
+                        {patientname}
                     </div>
                     <div className="absolute bottom-4 right-4 text-gray-500 font-poppins text-sm">
                         {currentTime}
