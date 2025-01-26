@@ -11,6 +11,7 @@ import RightArm from './pages/rightarm';
 import Head from './pages/head';
 import LoginPage from './pages/loginPage';
 import BodyPartPage from './pages/bodyPartPage';
+import ThreadCreationPage from './pages/threadPage';
 
 
 
@@ -29,6 +30,7 @@ function App() {
         <Route path="/leftarm" element={<LeftArm />} />
         <Route path="/rightarm" element={<RightArm />} />
         <Route path="/head" element={<Head />} />
+        <Route path="/thread" element={<ThreadCreationPage />} />
 
       </Routes>
     </Router>
