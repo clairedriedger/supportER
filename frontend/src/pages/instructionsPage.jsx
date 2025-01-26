@@ -42,7 +42,7 @@ const InstructionsPage = () => {
             </div>
 
             {/* Scrollable Bottom Section */}
-            <div className="flex-grow bg-gray-200 text-xl overflow-y-scroll p-7" style={{ marginTop: "7%" }}>
+            <div className="flex-grow bg-gray-200 text-xl overflow-y-scroll p-7" style={{ marginTop: "17%" }}>
                 <p>
                     <strong>Share Your Story</strong><br />
                     Start by clicking on the part of the body related to your visit (e.g., the area of concern for your ER issue).
@@ -78,6 +78,22 @@ const InstructionsPage = () => {
                     <strong>Respect the Community Guidelines</strong><br />
                     Please remain respectful in all interactions. Disrespectful behavior will result in being removed from the website.
                 </p>
+                <br />
+
+                <p>
+                    <strong>
+                        <span className="text-black">Inspiration Behind arch</span>
+                        <span className="text-pink-600">ER</span>
+                        </strong><br />
+                    In psychology, "misery loves company" refers to the tendency
+                     for people experiencing negative emotions like sadness or 
+                     distress to seek out others who are also experiencing similar 
+                     negative emotions, finding some comfort or validation in shared 
+                     hardship; essentially, unhappy people may feel better knowing 
+                     they aren't alone in their misery, leading them to gravitate 
+                     towards others in similar situations.
+                </p>
+
             </div>
         </div>
     );
