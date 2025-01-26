@@ -11,9 +11,11 @@ const LandingPage = () => {
             {/* Logo and Question Icon */}
             <header class="flex justify-between w-full px-4 py-2">
                 <div></div> {/* Placeholder for alignment */}
-                <button>
-                    <img src={back_arrow} alt="Question mark" class="w-3/4 h-3/4 object-cover rounded-2xl shadow-md" />
-                </button>
+                <Link to="..">
+                    <button>
+                        <img src={back_arrow} alt="Back arrow" class="w-3/4 h-3/4 object-cover rounded-2xl shadow-md" />
+                    </button>
+                </Link>
                 <h1 class="text-5xl font-bold">
                     <span class="text-black">arch</span><span class="text-pink-600">ER</span>
                 </h1>

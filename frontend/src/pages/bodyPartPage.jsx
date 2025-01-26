@@ -1,11 +1,13 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import head from '../assets/head.png';
 import bandaid from '../assets/bandaid_inverted.svg';
 import question_mark from '../assets/question_mark.png';
 import back_arrow from '../assets/back_button.png';
 
-const LandingPage = () => {
+//importing body parts
+import torso from '../assets/torso.png';
+
+const LandingPage = ({ bodyPart }) => {
     return (
         <div>
             {/* Logo and Question Icon */}
@@ -26,7 +28,7 @@ const LandingPage = () => {
 
             {/* Central Image */}
             <main class="flex-grow flex items-center justify-center">
-                <img src={head} alt="Da Vinci" class="w-3/4 h-3/4 object-cover rounded-2xl shadow-md" />
+                <img src={'../assets/${bodyPart}.png'} alt={bodyPart} class="w-3/4 h-3/4 object-cover rounded-2xl shadow-md" />
                 <a href="rightleg" class="absolute top-[2201px] left-[1031px] w-[685px] h-[748px] border-transparent" title="Right Leg"></a>
                 <a href="leftleg" class="absolute top-[2201px] left-[391px] w-[639px] h-[746px] border-transparent" title="Left Leg"></a>
                 <a href="body" class="absolute top-[1453px] left-[822px] w-[389px] h-[537px] border-transparent" title="Body"></a>
