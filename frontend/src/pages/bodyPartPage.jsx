@@ -64,33 +64,37 @@ const BodyPartPage = ({ bodyPart, patientUserName, startStatus, pID }) => {
     }
 
     return (
-        <div>
-            {/* For the archER title */}
-            <header className="absolute top-20 left-0 justify-between w-full px-1 py-2">
-                <h1 className="text-10xl">
-                    <span className="text-black">arch</span>
-                    <span className="text-pink-600 font-bold">ER</span>
-                </h1>
-            </header>
+        <div className="flex flex-col"> 
+            <div className="absolute top-4 w-full">
+                {/* For the archER title */}
+                <header className="flex justify-center top-4 px-1 py-2 w-full">
+                    <h1 className="text-10xl text-center">
+                        <span className="text-black">arch</span>
+                        <span className="text-pink-600 font-bold">ER</span>
+                    </h1>
+                </header>
 
 
+                
+            </div>
             {/* For the question mark button */}
-            <header className="absolute top-4 right-2 justify-between w-full px-1 py-2 bg-white">
-                <button
-                    className="absolute right-0 outline-none border-none shadow-none"
-                    onClick={() => navigate("/instructions")} // Navigate to InstructionsPage
-                >
-                    <img
-                        src={question_mark}
-                        alt="Question mark"
-                        className="w-11 h-11 object-contain"
-                    />
-                </button>
+            <header className="absolute top-4 right-2 px-1 py-2 bg-white">
+                    <button
+                        className="outline-none border-none shadow-none"
+                        onClick={() => navigate("/instructions")} // Navigate to InstructionsPage
+                    >
+                        <img
+                            src={question_mark}
+                            alt="Question mark"
+                            className="w-11 h-11 object-contain"
+                        />
+                    </button>
             </header>
+            
 
             {/* Render body part image dynamically */}
             <main
-                className="flex flex-grow items-center justify-center w-screen h-full relative"
+                className="flex flex-grow items-center justify-center w-screen h-full relative "
                 onClick={handleImageClick}
             >
                 <img
