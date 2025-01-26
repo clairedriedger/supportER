@@ -10,7 +10,7 @@ import LeftArm from './pages/leftarm';
 import RightArm from './pages/rightarm';
 import Head from './pages/head';
 import LoginPage from './pages/loginPage';
-
+import BodyPartPage from './pages/bodyPartPage';
 
 
 
@@ -20,21 +20,20 @@ function App() {
   return (
     <Router>
       <Routes>
-        <Route path="/" element={<LandingPage />} />
-        <Route path="/register" element={<RegisterPage />} /> 
+        <Route path="/" element={<LoginPage />} />
+        <Route path="/register" element={<RegisterPage />} />
+        <Route path="/body" element={<LandingPage />} />
         <Route path="/leftleg" element={<LeftLeg />} />
         <Route path="/rightleg" element={<RightLeg />} />
         <Route path="/torso" element={<Torso />} />
         <Route path="/leftarm" element={<LeftArm />} />
         <Route path="/rightarm" element={<RightArm />} />
         <Route path="/head" element={<Head />} />
-        {/*delete this later*/}
-        <Route path="/login" element={<LoginPage />} />
 
       </Routes>
     </Router>
   );
-  
+
   /*return (
     <>
       <div>
