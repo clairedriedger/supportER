@@ -1,18 +1,21 @@
 import React from 'react';
-import { Link, useLocation } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import davinci from '../assets/davinci.png';
 import bandaid from '../assets/bandaid_inverted.svg';
 import question_mark from '../assets/question_mark.png';
 
 
-
-const LandingPage = () => {
+const LandingPage = ({ patientUserName }) => {
     const location = useLocation();
     const patientName = location.state?.patient || {};
+    // const patientName = location.state?.patient || patientUserName; // Use prop as fallback
     const pid = location.state?.pid || {};
     const startStatus = location.state?.isLogin;
     console.log("PATIENT IS: ", patientName);
     console.log("isLogin IS: ", startStatus);
+
+    const navigate = useNavigate(); // Initialize useNavigate
+
     return (
         <div>
             {/* For the archER title */}
@@ -42,7 +45,7 @@ const LandingPage = () => {
                 <img src={davinci} alt="Da Vinci" class="w-3/4 h-3/4 object-cover rounded-2xl shadow-md" />
                 <Link
                     to="/rightleg"
-                    state= {{patient: patientName, pid:pid, startStatus: startStatus}}
+                    state={{ patient: patientName, pid: pid, startStatus: startStatus }}
                     className="absolute"
                     style={{
                         top: '50%',
@@ -54,7 +57,7 @@ const LandingPage = () => {
                 ></Link>
                 <Link
                     to="/leftleg"
-                    state= {{patient: patientName, pid:pid, startStatus: startStatus}}
+                    state={{ patient: patientName, pid: pid, startStatus: startStatus }}
                     className="absolute"
                     style={{
                         top: '50%',
@@ -66,7 +69,7 @@ const LandingPage = () => {
                 ></Link>
                 <Link
                     to="/torso"
-                    state= {{patient: patientName, pid:pid, startStatus: startStatus}}
+                    state={{ patient: patientName, pid: pid, startStatus: startStatus }}
                     className="absolute"
                     style={{
                         top: '33%',
@@ -78,7 +81,7 @@ const LandingPage = () => {
                 ></Link>
                 <Link
                     to="/leftarm"
-                    state= {{patient: patientName, pid:pid, startStatus: startStatus}}
+                    state={{ patient: patientName, pid: pid, startStatus: startStatus }}
                     className="absolute"
                     style={{
                         top: '32%',
@@ -90,7 +93,7 @@ const LandingPage = () => {
                 ></Link>
                 <Link
                     to="/rightarm"
-                    state= {{patient: patientName, pid:pid, startStatus: startStatus}}
+                    state={{ patient: patientName, pid: pid, startStatus: startStatus }}
                     className="absolute"
                     style={{
                         top: '32%',
@@ -102,7 +105,7 @@ const LandingPage = () => {
                 ></Link>
                 <Link
                     to="/head"
-                    state= {{patient: patientName, pid:pid, startStatus: startStatus}}
+                    state={{ patient: patientName, pid: pid, startStatus: startStatus }}
                     className="absolute"
                     style={{
                         top: '18%',
@@ -115,39 +118,31 @@ const LandingPage = () => {
             </main>
 
             {/* Footer Navigation */}
-            <footer class="absolute bottom-0 left-0 w-full bg-gray-100 p-4 rounded-t-2xl shadow-md ">
+            <footer class="absolute bottom-0 left-0 w-full bg-gray-100 p-8 rounded-t-2xl shadow-md ">
                 <div class="flex flex-row items-center">
 
                     {/* Footer */}
-                    <footer className="w-full bg-gray-100 p-4 rounded-t-2xl shadow-md ">
-                        <div className="flex justify-center items-center">
+                    {/* <footer className="w-full bg-gray-100 p-4 rounded-t-2xl shadow-md "> */}
+                    <div className="flex justify-center items-center">
 
-                            
 
-                            {/* Username text box */}
-                            {/* <input
-                                type="text"
-                                value="username"
-                                className="bg-pink-600 text-black py-2 px-2 rounded-full text-lg font-bold outline-none"
-                                readOnly
-                            /> */}
-                            {/* Username text box */}
-                            <text>username</text>
+                        {/* Username text box */}
+                        <p>{patientUserName}</p>
 
-                            {/* Bandaid image */}
-                            <div className="absolute right-0 mr-[30px]">
-                                <img
-                                    src={bandaid}
-                                    alt="bandaid"
-                                    className="w-11 h-11 object-contain" // Adjust size of the bandaid
-                                />
-                                <span className="absolute -top-2 -right-2 bg-pink-600 text-white text-sm font-bold w-6 h-6 flex items-center justify-center rounded-full">
-                                    87
-                                </span>
-                            </div>
-
+                        {/* Bandaid image */}
+                        <div className="absolute right-0 mr-[30px]">
+                            <img
+                                src={bandaid}
+                                alt="bandaid"
+                                className="w-11 h-11 object-contain" // Adjust size of the bandaid
+                            />
+                            <span className="absolute -top-2 -right-2 bg-pink-600 text-white text-sm font-bold w-6 h-6 flex items-center justify-center rounded-full">
+                                87
+                            </span>
                         </div>
-                    </footer>
+
+                    </div>
+                    {/* </footer> */}
 
                 </div>
             </footer>

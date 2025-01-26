@@ -47,9 +47,9 @@ const BodyPartPage = ({ bodyPart, patientUserName, startStatus, pID }) => {
 
     const handleArrowClick = (e) => {
         if (startStatus) {
-          navigate('/'); // Navigate to home if status is true
+            navigate('/'); // Navigate to home if status is true
         } else {
-          alert('Status is false, navigation prevented');
+            alert('Status is false, navigation prevented');
         };
     };
 
@@ -64,7 +64,7 @@ const BodyPartPage = ({ bodyPart, patientUserName, startStatus, pID }) => {
     }
 
     return (
-        <div className="flex flex-col"> 
+        <div className="flex flex-col">
             <div className="absolute top-4 w-full">
                 {/* For the archER title */}
                 <header className="flex justify-center top-4 px-1 py-2 w-full">
@@ -75,22 +75,22 @@ const BodyPartPage = ({ bodyPart, patientUserName, startStatus, pID }) => {
                 </header>
 
 
-                
+
             </div>
             {/* For the question mark button */}
             <header className="absolute top-4 right-2 px-1 py-2 bg-white">
-                    <button
-                        className="outline-none border-none shadow-none"
-                        onClick={() => navigate("/instructions")} // Navigate to InstructionsPage
-                    >
-                        <img
-                            src={question_mark}
-                            alt="Question mark"
-                            className="w-11 h-11 object-contain"
-                        />
-                    </button>
+                <button
+                    className="outline-none border-none shadow-none"
+                    onClick={() => navigate("/instructions")} // Navigate to InstructionsPage
+                >
+                    <img
+                        src={question_mark}
+                        alt="Question mark"
+                        className="w-11 h-11 object-contain"
+                    />
+                </button>
             </header>
-            
+
 
             {/* Render body part image dynamically */}
             <main
@@ -121,7 +121,7 @@ const BodyPartPage = ({ bodyPart, patientUserName, startStatus, pID }) => {
                             className="w-15 h-15 object-contain"
                         />
                     </button>
-                    
+
 
                 ))}
                 {showThread && (
@@ -132,7 +132,7 @@ const BodyPartPage = ({ bodyPart, patientUserName, startStatus, pID }) => {
                 )}
             </main>
 
-        
+
 
             {/* Footer */}
             <footer className="absolute bottom-0 left-0 w-full bg-gray-100 p-4 rounded-t-2xl shadow-md">
@@ -153,7 +153,7 @@ const BodyPartPage = ({ bodyPart, patientUserName, startStatus, pID }) => {
                     </Link>
 
                     {/* Username text box */}
-                    <text>username</text>
+                    <p>{patientUserName}</p>
 
                     {/* Bandaid image */}
                     <div className="relative">
